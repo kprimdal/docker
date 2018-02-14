@@ -32,3 +32,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 9000
 CMD ["php-fpm7.2"]
+
