@@ -12,7 +12,7 @@ RUN apt-get install -y --force-yes php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-co
                 php7.2-odbc php7.2-opcache php7.2-pgsql php7.2-phpdbg php7.2-pspell \
                 php7.2-readline php7.2-recode php7.2-soap php7.2-sqlite3 \
                 php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-xsl php7.2-zip \
-                php-tideways php-mongodb vim
+                vim
 
 RUN curl -o /bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 COPY wp-su.sh /bin/wp
