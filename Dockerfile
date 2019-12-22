@@ -14,9 +14,6 @@ RUN apt-get install -y --force-yes php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-co
                 php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-xsl php7.2-zip \
                 vim nodejs
 
-RUN curl -o /bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-COPY wp-su.sh /bin/wp
-RUN chmod +x /bin/wp-cli.phar /bin/wp
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.2/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.2/fpm/php.ini
