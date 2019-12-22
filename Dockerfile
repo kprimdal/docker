@@ -4,15 +4,15 @@ MAINTAINER  kristian@primux.dk
 RUN apt-get clean && apt-get -y update && apt-get install -y locales curl software-properties-common git \
   && locale-gen en_US.UTF-8 
 RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 RUN apt-get update
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 RUN apt-get install -y --force-yes php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-common php7.2-curl \
                 php7.2-cgi php7.2-dev php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap php7.2-intl \
                 php7.2-json php7.2-ldap php7.2-mbstring php7.2-mysql \
                 php7.2-odbc php7.2-opcache php7.2-pgsql php7.2-phpdbg php7.2-pspell \
                 php7.2-readline php7.2-recode php7.2-soap php7.2-sqlite3 \
                 php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-xsl php7.2-zip \
-                vim
+                vim nodejs
 
 RUN curl -o /bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 COPY wp-su.sh /bin/wp
