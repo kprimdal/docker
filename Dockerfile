@@ -14,6 +14,9 @@ RUN apt-get install -y php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-common php7.2-
                 php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-xsl php7.2-zip \
                 vim nodejs git-ftp
 
+RUN git config git-ftp.insecure 1
+RUN git config --global user.name "Kristian Primdal"
+RUN git config --global user.email "kristian@primux.dk"
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.2/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.2/fpm/php.ini
