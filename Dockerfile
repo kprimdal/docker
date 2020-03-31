@@ -14,7 +14,6 @@ RUN apt-get install -y php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-common php7.2-
                 php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-xsl php7.2-zip \
                 vim nodejs git-ftp zsh
 
-RUN git config git-ftp.insecure 1
 RUN git config --global user.name "Kristian Primdal"
 RUN git config --global user.email "kristian@primux.dk"
 
@@ -36,6 +35,8 @@ RUN curl https://getcomposer.org/installer > composer-setup.php && php composer-
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 RUN chmod +x wp-cli.phar
 RUN mv wp-cli.phar /usr/local/bin/wp
+
+RUN curl -s https://shopify.github.io/themekit/scripts/install.py | python
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
