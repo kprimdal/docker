@@ -42,6 +42,6 @@ RUN curl -s https://shopify.github.io/themekit/scripts/install.py | python
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 22
+EXPOSE 22 9000
 CMD ["php-fpm7.4"]
 
