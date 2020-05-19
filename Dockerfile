@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y php7.4-bcmath php7.4-bz2 php7.4-cli php
                 php7.4-odbc php7.4-opcache php7.4-pgsql php7.4-phpdbg php7.4-pspell \
                 php7.4-readline php7.4-soap php7.4-sqlite3 \
                 php7.4-tidy php7.4-xml php7.4-xmlrpc php7.4-xsl php7.4-zip \
-                vim nodejs git-ftp zsh openssh-server
+                vim nodejs git-ftp zsh openssh-server php-imagick
 
 RUN git config --global user.name "Kristian Primdal"
 RUN git config --global user.email "kristian@primux.dk"
